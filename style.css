@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,700;1,800;1,900&display=swap");
+
+    *{
+        font-family: 'Poppins', sans-serif;
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+    }
+
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    /* header */
+
+    .header{
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 1000;
+        background: #fff;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 9%;
+    }
+
+    .header .logo{
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: #130f40;
+    }
+
+    .header .logo i{
+        color: #ff7800;
+        padding-right: .5rem;
+    }
+
+    .header .navbar a{
+        font-size: 1.7rem;
+        color: #130f40;
+        margin: 0 1rem;
+    }
+
+    .header .navbar a:hover{
+        color: #ff7800;
+    }
+
+    .header .icons div{
+        font-size: 2.5rem;
+        margin-left: 1.7rem;
+        color: #130f40;
+        cursor: pointer;
+    }
+
+    /* :hover é uma pseudo-classe que é aplicada quando o usuário passa o mouse sobre o elemento selecionado. 
+    Neste caso, quando o mouse passa sobre o elemento div dentro de .icons, a cor do texto muda para #ff7800 (laranja). */
+    .header .icons div:hover{
+        color: #ff7800;
+    }
+
+    /* #menu: Este é um seletor CSS que seleciona um elemento com o ID menu. 
+    O seletor # é usado para selecionar elementos com um ID específico em HTML. */
+    .header .icons #menu{
+        display: none;
+    }
+
+    .header .shopping-cart{
+        position: absolute;
+        top: 115%; right: -105% ;
+        background: #fff;
+        border-radius: .5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+        width: 35em;
+        padding: 2rem;
+    }
+    /* active é adicionada a um elemento HTML, 
+    ela geralmente desencadeia uma mudança em sua aparência ou comportamento.  */
+    .header .shopping-cart.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
