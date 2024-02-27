@@ -247,6 +247,18 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
         garantindo que eles se ajustem dinamicamente ao tamanho da tela do dispositivo, independentemente do tamanho do dispositivo ou da resolução da tela. */
         min-height: 100vh;
         /* !important é uma declaração que aumenta a especificidade da regra CSS,
-        tornando-a prioritária sobre outras regras que poderiam estar definidas para a mesma propriedade.  */
+        tornando-a prioritária sobre outras regras que poderiam estar definidas para a mesma propriedade. */
         background-size: cover !important;
+        background-position: center !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    home.slide .content{
+        width: 60rem;
+        text-align: center;
+    }
+
+
+
