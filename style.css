@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,700;1,800;1,900&display=swap");
 
+/* px é uma unidade de medida fixa que representa um pixel na tela.
+Quando você especifica um tamanho em pixels, como font-size: 16px; ou width: 200px;, você está definindo um tamanho exato em relação à resolução do dispositivo. */
+
+/* rem é uma unidade de medida relativa que representa o tamanho da fonte do elemento raiz (html ou :root).
+Você pode usar rem para definir tamanhos de fonte, espaçamentos, margens, etc., de forma que esses valores se ajustem automaticamente
+A vantagem do rem é que ele é relativo ao tamanho da fonte do elemento raiz, o que torna mais fácil criar layouts escaláveis. */
+
+/* % é uma unidade de medida relativa que representa uma porcentagem do tamanho do elemento pai.
+você está definindo um tamanho em relação ao tamanho do elemento pai.
+Por exemplo, se você tiver um elemento pai com largura de 400px e definir width: 50%; em um elemento filho, o elemento filho terá 200px de largura.
+As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicamente ao tamanho do contêiner pai ou da tela. */
+
+
     *{
         font-family: 'Poppins', sans-serif;
         margin: 0; padding: 0;
@@ -18,6 +31,7 @@
     }
 
     .btn{
+        /* está fazendo com que um elemento se comporte como um bloco, mas ainda mantenha algumas características de elementos em linha, proporcionando flexibilidade na disposição e no design do layout. */
         display: inline-block;
         margin-top: 1rem;
         padding: .8rem 3rem;
@@ -26,8 +40,10 @@
         background: none;
         color: #130f40;
         font-size: 1.7rem;
+        /* faz com que o cursor assuma a forma de uma mão, indicando que o elemento é clicável, como um link, botão ou qualquer elemento interativo. */
         cursor: pointer;
     }
+
     .btn:hover{
         background: #130f40;
         color: #fff;
@@ -38,12 +54,18 @@
     .header{
         position: fixed;
         top: 0; left: 0; right: 0;
+        /* é usada para controlar a sobreposição de elementos em um layout quando há sobreposição entre eles
+        Quando você define z-index: 1000;, você está dizendo ao navegador que este elemento deve ser posicionado acima de outros elementos com z-index menor ou não definido. 
+        Ou seja, o elemento com z-index: 1000; estará em um nível de empilhamento mais alto em relação aos outros elementos. */
+        /* só funciona em elementos que possuem uma propriedade position diferente de static (ou seja, relative, absolute ou fixed).  */
         z-index: 1000;
         background: #fff;
         box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
         display: flex;
         align-items: center;
+        /* controlar o espaçamento entre os itens ao longo do eixo principal (geralmente o eixo horizontal) */
         justify-content: space-between;
+        /* preenchimento */
         padding: 2rem 9%;
     }
 
@@ -153,3 +175,63 @@
         text-align: center;
         width: 100%;
     }
+
+    .header .login-form{
+        position: absolute;
+        top: 115%; right: -105%;
+        background: #fff;
+        border-radius: .5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+        width: 35rem;
+        padding: 2rem;
+    }
+
+    .header .login-form.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+    .header .login-form h3{
+        color: #130f40;
+        /* altera o estilo do texto para que todas as letras sejam exibidas em maiúsculas. */
+        text-transform: uppercase;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: .7rem;
+    }
+
+    .header .login-form .box{
+        margin: .7rem 0;
+        border: .1rem solid rgba(0,0,0,0.1);
+        padding: 1rem 1.2rem;
+        font-size: 1.5rem;
+        color: #130f40;
+        /* é usada para especificar que nenhum tipo de transformação de capitalização deve ser aplicado ao texto.
+         Isso significa que o texto será exibido exatamente como foi inserido no HTML, sem nenhuma alteração em sua capitalização. */
+        text-transform: none;
+        width: 100%;
+    }
+
+    .header .login-form .lembre{
+        display: flex;
+        align-items: center;
+        /* definir o espaçamento entre os itens dentro do contêiner */
+        gap: .5rem;
+        margin: .7rem 0;
+    }
+
+    .header .login-form .lembre label{
+        font-size: 1.5rem;
+        color: #666;
+        cursor: pointer;
+    }
+
+    .header .login-form .btn{
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* final header */
+
+    /* inicio */

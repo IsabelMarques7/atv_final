@@ -6,6 +6,12 @@
     <title>Document</title>
     <!--font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- swiper cdn link -->
+    <!-- O "Swiper CDN" se refere ao uso de uma Content Delivery Network (CDN) para distribuir os arquivos do "Swiper", 
+    uma biblioteca de código aberto para criar sliders (carrosséis), galerias de imagens, e outros componentes de 
+    interface de usuário interativos em páginas da web ou aplicativos móveis. -->
+    <link
+     rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- css  -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -69,20 +75,81 @@
             <a href="#" class="btn">checkout cart</a>
         </div>
 
+                             <!-- <form>: Esta é uma tag HTML usada para criar um formulário.
+                             O formulário é uma estrutura que permite ao usuário inserir dados que podem ser submetidos para processamento do lado do servidor. -->
+        <form action="" class="login-form">
+                             <!-- class="login-form": Este atributo class atribui a classe CSS login-form ao formulário.
+                                Essa classe pode ser usada para estilizar o formulário de acordo com as regras CSS específicas. -->
+                             <!-- action="": O atributo action especifica para onde os dados do formulário serão enviados quando ele for submetido.
+                             Neste caso, o valor está vazio (""), o que significa que o formulário será enviado para a mesma página que está atualmente sendo exibida. -->
+            <h3>login form</h3>
+            <input type="email" placeholder="digite seu email" class="box">
+            <input type="password" placeholder="digite sua senha" class="box">
+            <div class="lembre">
+                 <!-- <input> cria uma caixa de seleção (checkbox) no formulário -->
+                 <!-- O atributo name define o nome da caixa de seleção. 
+                    Como está vazio neste caso, a caixa de seleção não enviará nenhum valor específico quando o formulário for submetido. -->
+                 <!-- id="lembre-de-mim": O atributo id atribui um identificador único a essa caixa de seleção. Este identificador é usado para associar a caixa de seleção ao seu rótulo correspondente. -->
+                <input type="checkbox" name="" id="lembre-se">
+                <label for="lembre-se">lembre-se</label>
+            </div>
+            <!-- O atributo value define o texto exibido no botão e a classe  -->
+            <input type="enviar" value="login" class="btn">
+        </form>
       
     </header>
 
-
-
-
-
-
-
     <!-- fim do cabeçalho -->
 
+    <!-- inicio do inicio -->
 
-<!-- js link -->
-<script src="script.js"></script>
+    <section class="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide" style="background: url() no-repeat;">
+                    <div class="content">
+                        <h3>the <span>tastiet</span> pizza <br> on the planet</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url() no-repeat;">
+                    <div class="content">
+                        <h3>the <span>tastiet</span> pizza <br> on the planet</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url() no-repeat;">
+                    <div class="content">
+                        <h3>the <span>tastiet</span> pizza <br> on the planet</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- final do inicio -->
+
+    <!-- swiper cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- js link -->
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -5,5 +5,16 @@ let cart = document.querySelector('.shopping-cart');
 // cart.classList.toggle('active');: Dentro da função de retorno de chamada, há uma instrução para alternar a classe active no elemento cart. O método classList.toggle() alterna a presença da classe especificada. Se a classe active estiver presente no elemento cart, ela será removida; se não estiver presente, será adicionada.
 document.querySelector('#cart').onclick = () =>{
     cart.classList.toggle('active');
+    login.classList.remove('active');
 }
 
+// .login-form e o armazena em uma variável chamada login. O método document.querySelector() é usado para encontrar o primeiro elemento que corresponde ao seletor especificado.
+let login = document.querySelector('.login-form');
+
+// Esta linha de código seleciona o primeiro elemento HTML com o ID login e define uma função de retorno de chamada (callback) para ser executada quando o elemento é clicado pelo usuário. O onclick é um evento de clique que ocorre quando o elemento é clicado.
+// O método classList.toggle() alterna a presença da classe especificada
+document.querySelector('#login').onclick = () =>{
+    login.classList.toggle('active');
+ // Dentro da função de retorno de chamada, há uma instrução para alternar a classe active no elemento login. O método classList.toggle() alterna a presença da classe especificada. Se a classe active estiver presente no elemento login, ela será removida; se não estiver presente, será adicionada.
+    cart.classList.remove('active');
+}
