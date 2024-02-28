@@ -18,3 +18,17 @@ document.querySelector('#login').onclick = () =>{
  // Dentro da função de retorno de chamada, há uma instrução para alternar a classe active no elemento login. O método classList.toggle() alterna a presença da classe especificada. Se a classe active estiver presente no elemento login, ela será removida; se não estiver presente, será adicionada.
     cart.classList.remove('active');
 }
+
+var swiper = new Swiper(".inicio-slider", {
+    autoplay:{
+        delay:7500,
+        disableOnInteraction:false,
+    },
+    graphCursor:true,
+    loop: true,
+    conteredSlide:true,
+    navigator: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
