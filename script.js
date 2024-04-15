@@ -19,6 +19,11 @@ document.querySelector('#login').onclick = () =>{
     cart.classList.remove('active');
 }
 
+window.onscroll = () => {
+    cart.classList.remove('active')
+    login.classList.remove('active')
+}
+
 var swiper = new Swiper(".inicio-slider", {
     autoplay:{
         delay:7500,

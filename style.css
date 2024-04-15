@@ -47,6 +47,31 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
         color: #ff7800;
     }
 
+    .cabecalho{
+        background: url(img/cabecalho.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding-top: 12rem;
+        padding-bottom: 8rem;
+    }
+
+    .cabecalho h1{
+        color: #fff;
+        font-size: 4rem
+    }
+
+    .cabecalho p{
+        padding-top: 1rem;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .cabecalho p a{
+        color: #ff7800;
+        padding-right: .5rem;
+    }
+
     .btn{
         /* está fazendo com que um elemento se comporte como um bloco, mas ainda mantenha algumas características de elementos em linha, proporcionando flexibilidade na disposição e no design do layout. */
         display: inline-block;
@@ -475,7 +500,50 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
     text-decoration: line-through;
 }
 
-/* fim  */
+/* fim  */ 
+
+/* sobre nos */
+.sobre .linha{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.sobre .linha .imagem{
+    flex: 1 1 32rem;
+}
+
+.sobre .linha .imagem img{
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+
+.sobre .linha .content{
+    flex: 1 1 50rem;
+}
+
+.sobre .linha .content h3{
+    font-size: 3.5rem;
+    color: #130f40;
+}
+
+.sobre .linha .content h3 span{
+    color: #ff7800;
+}
+
+.sobre .linha .content p{
+    font-size: 1.6rem;
+    color: #666;
+    padding: 2rem 0;
+    line-height: 2;
+}
+
+/* fim */
+
+/* blog */
+
+
 
 /* rodape  */
 
@@ -546,4 +614,8 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
     text-transform: capitalize;
     color: #666;
     border-top: .1rem solid #666;
+}
+
+.rodape .creditos span{
+    color: #ff7800;
 }
