@@ -543,6 +543,116 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
 
 /* blog */
 
+.blog .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+}
+
+.blog .box-container .box{
+    text-align: center;
+    box-shadow: 1 .5rem 1rem rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.blog .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.blog .box-container .box .icons{
+    background: #ff7800;
+    border-radius: .5rem;
+    padding: 1rem;
+    position: relative;
+    top: -2rem;
+    display: inline-block;
+}
+
+.blog .box-container .box .icons a{
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+.blog .box-container .box .icons a:hover{
+    color: #130f40;
+
+}
+
+.blog .box-container .box .icons a i{
+    color: #130f40;
+    padding-right: .5rem;
+}
+
+.blog .box-container .box h3{
+    font-size: 2rem;
+    color: #130f40;
+}
+
+.blog .box-container .box p{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: #666;
+}
+
+/* fim */
+
+/* menu */
+
+.menu .slide .title{
+    padding: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    background: #ff7800;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.menu .slide .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.menu .slide .box-container .box{
+    flex: 1 1 38rem;
+    background: #eee;
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menu .slide .box-container .box h3{
+    font-size: 2.2rem;
+    color: #130f40;
+    padding-bottom: .5rem;
+}
+
+.menu .slide .box-container .box p{
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 2;
+}
+
+.menu .slide .box-container .box .preco{
+    font-size: 2.2rem;
+    color: #ff7800;
+}
+
+.menu .slide .box-container .box:hover{
+    cursor: pointer;
+    transform: scale(.9);
+}
+
 
 
 /* rodape  */
