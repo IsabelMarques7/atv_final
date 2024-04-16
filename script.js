@@ -49,3 +49,19 @@ var swiper = new Swiper(".menu-slider", {
         clickable: true,
     },
 });
+
+let vzlContainer = document.querySelector('.vzl-menu-container');
+let vzlBox = vzlContainer.querySelectorAll('.vzl-menu');
+
+document.querySelectorAll('.menu .box').forEach(menu =>{
+    menu.onclick = () =>{
+        vzlContainer.style.display = 'flex';
+        let name = menu.getAttribute('data-name');
+        vzlBox.forEach(vzl => {
+            let target = vzl.getAttribute('data-target')
+            if(name == target){
+                vzl.classList.add('active')
+            }
+        })
+    }
+})

@@ -490,7 +490,7 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
     color: #130f40;
     font-size: 2.5rem;
     font-weight: bolder;
-    margin-right: 1rem;
+    margin-right: 1rem; 
 }
 
 .pizzas .box-container .box .preço span{
@@ -652,8 +652,50 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
     cursor: pointer;
     transform: scale(.9);
 }
+ /* fim  */
 
+ /* vzl-menu-container */
 
+ .vzl-menu-container{
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    z-index: 1100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .vzl-menu-container .vzl-menu{
+    text-align: center;
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    display: none;
+    width: 35rem;
+ }
+
+ .vzl-menu-container .vzl-menu.active{
+    display: inline-block;
+ }
+
+ .vzl-menu-container .vzl-menu h3{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: #130f40;
+ }
+
+ .vzl-menu-container .vzl-menu .stars{
+    margin-top: .5rem;
+ }
+
+ .vzl-menu-container .vzl-menu .star i{
+    font-size: 1.7rem;
+    color: #ff7800;
+ }
+
+ /* fim */
 
 /* rodape  */
 
