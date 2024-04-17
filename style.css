@@ -690,12 +690,81 @@ As porcentagens são úteis para criar layouts fluidos que se ajustam dinamicame
     margin-top: .5rem;
  }
 
- .vzl-menu-container .vzl-menu .star i{
+ .vzl-menu-container .vzl-menu .stars i{
     font-size: 1.7rem;
     color: #ff7800;
  }
 
+ .vzl-menu-container .vzl-menu p{
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1rem 0;
+    line-height: 2;
+ }
+
+ .vzl-menu-container .vzl-menu .preco{
+    font-size: 2.5rem;
+    color: #130f40;
+    margin-bottom: .5rem;
+ }
+
+ #fechar{
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 6rem;
+    cursor: pointer;
+    color: #fff;
+ }
+
+ #fechar:hover{
+    transform: rotate(90deg);
+    color: #ff7800;
+ }
+
  /* fim */
+
+ /* galeria */
+ .galeria .galeria-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+ }
+
+ .galeria .galeria-container .box{
+    height: 30rem;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .galeria .galeria-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+ }
+
+ .galeria .galeria-container .box .icon{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+ }
+
+ .galeria .galeria-container .box .icon i{
+    font-size: 6rem;
+    color: #fff;
+ }
+
+ .galeria .galeria-container .box:hover .icon{
+    display: flex;
+ }
+
+
+ /* galeria fim*/
 
 /* rodape  */
 

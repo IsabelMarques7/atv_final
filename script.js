@@ -62,6 +62,13 @@ document.querySelectorAll('.menu .box').forEach(menu =>{
             if(name == target){
                 vzl.classList.add('active')
             }
-        })
-    }
-})
+        });
+    };
+});
+
+vzlContainer.querySelector('#fechar').onclick = () =>{
+    vzlContainer.style.display = 'none'
+    vzlBox.forEach(close =>{
+        close.classList.remove('active')
+    });
+};
