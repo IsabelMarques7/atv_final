@@ -1,38 +1,45 @@
-// let card = document.querySelector('.shopping-cart');: Esta linha de código seleciona o primeiro elemento HTML que possui a classe shopping-cart e o armazena em uma variável chamada card. O método document.querySelector() é usado para encontrar o primeiro elemento que corresponde ao seletor especificado, neste caso, um elemento com a classe shopping-cart.
+//Seleciona o elemento HTML com a classe .shopping-cart e armazena na variável cart:
+//A função document.querySelector() é usada para selecionar o primeiro elemento que corresponde ao seletor CSS fornecido (neste caso, .shopping-cart).
 let cart = document.querySelector('.shopping-cart');
 
-// document.querySelector('#cart').onclick = () => { ... }: Esta linha de código seleciona o primeiro elemento HTML com o ID cart e define uma função de retorno de chamada (callback) para ser executada quando o elemento é clicado pelo usuário. O onclick é um evento de clique que ocorre quando o elemento é clicado.
-// cart.classList.toggle('active');: Dentro da função de retorno de chamada, há uma instrução para alternar a classe active no elemento cart. O método classList.toggle() alterna a presença da classe especificada. Se a classe active estiver presente no elemento cart, ela será removida; se não estiver presente, será adicionada.
+//Adiciona um evento de clique ao elemento com o ID #cart:
+//Quando o elemento é clicado, a classe active é alternada (toggle()) no elemento cart. Se a classe estiver presente, ela é removida; se não estiver, ela é adicionada. Além disso, a classe active é removida do elemento login.
 document.querySelector('#cart').onclick = () =>{
     cart.classList.toggle('active');
     login.classList.remove('active');
 }
 
-// .login-form e o armazena em uma variável chamada login. O método document.querySelector() é usado para encontrar o primeiro elemento que corresponde ao seletor especificado.
+//Seleciona o elemento HTML com a classe .login-form e armazena na variável login:
 let login = document.querySelector('.login-form');
 
-// Esta linha de código seleciona o primeiro elemento HTML com o ID login e define uma função de retorno de chamada (callback) para ser executada quando o elemento é clicado pelo usuário. O onclick é um evento de clique que ocorre quando o elemento é clicado.
-// O método classList.toggle() alterna a presença da classe especificada
+//Adiciona um evento de clique ao elemento com o ID #login:
+//Define um manipulador de evento para o clique no elemento com o ID #login. Quando clicado, a classe active é alternada no elemento login e removida do elemento cart.
 document.querySelector('#login').onclick = () =>{
     login.classList.toggle('active');
- // Dentro da função de retorno de chamada, há uma instrução para alternar a classe active no elemento login. O método classList.toggle() alterna a presença da classe especificada. Se a classe active estiver presente no elemento login, ela será removida; se não estiver presente, será adicionada.
     cart.classList.remove('active');
 }
 
+//Seleciona o elemento HTML com a classe .navbar e armazena na variável navbar:
  let navbar = document.querySelector('.navbar');
 
+//Adiciona um evento de clique ao elemento com o ID #menu:
+//Define um manipulador de evento para o clique no elemento com o ID #menu. Quando clicado, a classe active é alternada no elemento navbar, e as classes active são removidas dos elementos cart e login.
  document.querySelector('#menu').onclick = () =>{
     navbar.classList.toggle('active')
     cart.classList.remove('active')
     login.classList.remove('active')
  }
 
+//Remove a classe active de cart, login, e navbar quando a página é rolada:
+//Define um manipulador de evento para o evento de rolagem da janela. Quando a página é rolada, a classe active é removida dos elementos cart, login e navbar.
 window.onscroll = () => {
     cart.classList.remove('active')
     login.classList.remove('active')
     navbar.classList.remove('active')
 }
 
+//Inicializa um swiper para o elemento com a classe .inicio-slider:
+//Configura um carrossel (swiper) para o elemento com a classe .inicio-slider, com autoplay, loop, e navegação personalizada.
 var swiper = new Swiper(".inicio-slider", {
     autoplay:{
         delay:7500,
@@ -47,6 +54,9 @@ var swiper = new Swiper(".inicio-slider", {
     },
 });
 
+
+//Inicializa um swiper para o elemento com a classe .menu-slider:
+//Configura um carrossel (swiper) para o elemento com a classe .menu-slider, com loop, altura automática, e paginação clicável.
 var swiper = new Swiper(".menu-slider", {
     graphCursor:true,
     loop: true,
@@ -59,9 +69,12 @@ var swiper = new Swiper(".menu-slider", {
     },
 });
 
+//Seleciona o contêiner .vzl-menu-container e os itens .vzl-menu:
 let vzlContainer = document.querySelector('.vzl-menu-container');
 let vzlBox = vzlContainer.querySelectorAll('.vzl-menu');
 
+//Adiciona eventos de clique aos elementos .menu .box:
+//Para cada elemento .menu .box, adiciona um evento de clique que torna o contêiner vzlContainer visível (display: 'flex') e ativa a classe active nos itens correspondentes.
 document.querySelectorAll('.menu .box').forEach(menu =>{
     menu.onclick = () =>{
         vzlContainer.style.display = 'flex';
@@ -75,6 +88,8 @@ document.querySelectorAll('.menu .box').forEach(menu =>{
     };
 });
 
+//Adiciona um evento de clique ao elemento com o ID #fechar no contêiner vzlContainer:
+//Define um manipulador de evento para fechar o contêiner vzlContainer e remover a classe active de todos os itens vzlBox quando o botão de fechar é clicado.
 vzlContainer.querySelector('#fechar').onclick = () =>{
     vzlContainer.style.display = 'none'
     vzlBox.forEach(close =>{
